@@ -1,0 +1,421 @@
+.swiper-container {
+    position: relative;
+    max-width: 1280px;
+    height: 480px;
+    overflow: visible;
+}
+
+.swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .main-slide-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.main_slider .swiper-container::before,
+.main_slider .swiper-container::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.48);
+    z-index: 100;
+    position: absolute;
+    top: 0;
+}
+.main_slider .swiper-container::after {
+    right: 100%;
+}
+.main_slider .swiper-container::before {
+    left: 100%;
+}
+.swiper-slide .swiper-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, 0);
+}
+.mainswiper-button-next,
+.mainswiper-button-prev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url(/images/화살표버튼오른쪽.svg);
+    background-size: 50px 50px;
+    z-index: 1000;
+}
+
+.mainswiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+    transform: scaleX(-1);
+    top: 50%;
+    left: -50px;
+}
+
+.mainswiper-button-next,
+.swiper-container-rtl .mainswiper-button-prev {
+    top: 50%;
+    right: -50px;
+}
+.swiper-pagination-bullet {
+    margin-left: 10px;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #000000;
+    border-radius: 6px;
+    width: 60px;
+}
+
+.slide-bottom {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000000;
+    position: relative;
+
+    .inner {
+        position: relative;
+        .main-info-area {
+            display: flex;
+            li {
+                margin-right: 130px;
+                .info-tit {
+                    font-size: 24px;
+
+                    i {
+                        margin-right: 4px;
+                    }
+                }
+                .info-txt {
+                    margin-left: 35px;
+                    margin-top: 6px;
+                    font-size: 16px;
+                    span {
+                        display: block;
+                        font-size: 16px;
+                        color: #767676;
+                    }
+                }
+            }
+        }
+    }
+    .info {
+        i {
+            position: relative;
+            top: 3px;
+        }
+    }
+    .info-badge {
+        position: absolute;
+        top: 6px;
+        right: 0;
+        a {
+            min-width: 123px;
+            height: 40px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #000000;
+            border-radius: 7px;
+            background: #ffffff;
+            padding: 15px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 2.5px;
+            border: 1.5px solid #000;
+            transition: all 0.3s;
+
+            &:hover {
+                background: #000;
+                color: #fff;
+                border: 1.5px solid transparent;
+            }
+        }
+    }
+}
+
+// exhibition
+.main-section-1 {
+    margin-top: 100px;
+    position: relative;
+    h2 {
+        font-size: $h2Fontsize;
+    }
+    .exhivition-con {
+        margin-top: 70px;
+        display: flex;
+        .con-img {
+            width: 30%;
+            height: 400px;
+            display: block;
+            position: relative;
+            li {
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border: $imgBorder;
+                }
+            }
+        }
+        .txt-box {
+            width: 80%;
+            margin-left: 200px;
+
+            li {
+                position: relative;
+                margin-bottom: 60px;
+
+                a {
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+                p {
+                    position: absolute;
+                    top: 44px;
+                    left: 114px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+.badge {
+    font-size: 15px;
+    display: inline-block;
+    min-width: 73px;
+    min-height: 31px;
+    padding: 2px 4px;
+    color: #fff;
+    background-color: #000000;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: normal;
+    line-height: 2;
+    width: auto;
+    margin-right: 30px;
+}
+.circle-text {
+    width: 100%;
+    .rotating-text1,
+    .rotating-text2 {
+        position: absolute;
+        bottom: -200px;
+        right: 10px;
+        animation: rotate 10s linear infinite;
+        transform-origin: 50% 50%;
+        transition: all 1s;
+        fill: $blue;
+        zoom: 1.8;
+        z-index: -1;
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(1turn);
+            }
+        }
+    }
+    .rotating-text2 {
+        fill: $lightGrey;
+        bottom: -100px;
+        right: -50px;
+        z-index: -2;
+        zoom: 1.2;
+    }
+}
+
+//program
+.main-section-2 {
+    width: 100%;
+    margin-top: 128px;
+    padding-bottom: 128px;
+    background-color: #20231f;
+    .inner {
+        h2 {
+            padding-top: 100px;
+            color: #fff;
+            font-size: 40px;
+            position: relative;
+            top: 50px;
+        }
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .nav-wrap {
+            display: flex;
+            align-items: center;
+            // overflow: hidden;
+            width: 100%;
+        }
+        .slider-nav-wrap {
+            width: 60%;
+            overflow: hidden;
+            .slider-nav {
+                .slick-slide {
+                    height: 400px;
+                    padding: 0 10px;
+                }
+                .slick-list {
+                    overflow: visible;
+                }
+            }
+        }
+        .slider-for {
+            width: 40%;
+            height: 300px;
+
+            .program-txt {
+                color: #fff;
+                h3 {
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin-top: 50px;
+                    margin-bottom: 33px;
+                    display: block;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                p {
+                    font-size: 16px;
+                }
+                button {
+                    font-size: 15px;
+                    display: inline-block;
+                    min-width: 73px;
+                    min-height: 31px;
+                    padding: 4px 6px;
+                    background-color: #ffffff;
+                    text-align: center;
+                    border-radius: 7px;
+                    font-weight: normal;
+                    line-height: 2;
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+.slick-slider {
+    .slick-arrow {
+        z-index: 10;
+        width: 84px;
+        height: 84px;
+        background: transparent;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+
+        &::before {
+            display: none;
+        }
+    }
+    .slick-prev {
+        background-image: url(/images/main/화살표.png);
+    }
+    .slick-next {
+        background-image: url(/images/main/화살표.png);
+    }
+}
+
+.main-section-3 {
+    width: 100%;
+    margin: 128px 0;
+    .inner {
+        display: flex;
+        justify-content: space-between;
+        .vr-tour {
+            width: 45%;
+            position: relative;
+            h2 {
+                font-size: $h2Fontsize;
+            }
+            .tour-con {
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 380px;
+                    margin-top: 34px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .notice {
+            width: 45%;
+            position: relative;
+            h2 {
+                font-size: $h2Fontsize;
+                padding-bottom: 34px;
+                border-bottom: 3px solid #000;
+                margin-bottom: 5px;
+            }
+            .lst-bbs {
+                li {
+                    border-bottom: 2px solid #d4d4d4;
+                    padding: 30px 4px;
+                    position: relative;
+                    &:last-child {
+                        border-bottom: 3px solid #000;
+                        padding-bottom: 34px;
+                    }
+                    &::before {
+                        display: block;
+                        content: "";
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: #000;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translateY(-50%);
+                    }
+                }
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 20px;
+                    margin-left: 10px;
+                    em {
+                        color: $darkGrey;
+                    }
+                }
+            }
+        }
+    }
+}
+.more {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    a {
+        display: flex;
+        align-items: center;
+        .material-symbols-outlined {
+            position: relative;
+            top: 1px;
+            font-weight: lighter;
+        }
+    }
+}

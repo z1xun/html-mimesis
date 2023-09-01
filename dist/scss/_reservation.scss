@@ -1,0 +1,27 @@
+.reservation-tit {
+    margin: 45px 0 32px;
+}
+
+.reservation-subtit-wrap {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid $b;
+    border-bottom: 1px solid $b;
+    padding: 12px 0;
+}
+.reservation-container {
+    padding: 65px 0;
+    .inner {
+        display: flex;
+
+        .col-left {
+            width: 30%;
+            height: 100px;
+            background: #e34848;
+        }
+        .col-right {
+            width: 70%;
+            background: #8d0909;
+        }
+    }
+}
