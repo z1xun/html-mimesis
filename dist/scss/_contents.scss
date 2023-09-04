@@ -195,6 +195,20 @@
         display: none;
     }
 }
-.map-wrap {
-    padding: 30px;
+.contact-wrap {
+    padding: 85px 0;
+    display: flex;
+    justify-content: space-between;
+    h3 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 18px;
+    }
+    .address {
+        margin-top: 20px;
+    }
+    .tel {
+        margin-top: 30px;
+    }
 }

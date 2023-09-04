@@ -144,6 +144,29 @@
 .main-section-1 {
     margin-top: 100px;
     position: relative;
+    &::before {
+        content: url(/images/main/circle\(grey\).png);
+        position: absolute;
+        bottom: -128px;
+        right: -44px;
+        animation: ani 6s infinite linear;
+    }
+    &::after {
+        content: url(/images/main/circle\(blue\).png);
+        position: absolute;
+        bottom: -288px;
+        right: 111px;
+        z-index: -1;
+        animation: ani 6s infinite linear;
+    }
+    @keyframes ani {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
     h2 {
         font-size: $h2Fontsize;
     }
@@ -153,9 +176,10 @@
         .con-img {
             width: 30%;
             height: 400px;
-            display: block;
             position: relative;
             li {
+                opacity: 0;
+                transition: all 0.2s;
                 img {
                     position: absolute;
                     top: 0;
@@ -165,6 +189,9 @@
                     object-fit: cover;
                     border: $imgBorder;
                 }
+            }
+            .active {
+                opacity: 1;
             }
         }
         .txt-box {
@@ -209,34 +236,6 @@
     width: auto;
     margin-right: 30px;
 }
-.circle-text {
-    width: 100%;
-    .rotating-text1,
-    .rotating-text2 {
-        position: absolute;
-        bottom: -200px;
-        right: 10px;
-        animation: rotate 10s linear infinite;
-        transform-origin: 50% 50%;
-        transition: all 1s;
-        fill: $blue;
-        zoom: 1.8;
-        z-index: -1;
-
-        @keyframes rotate {
-            100% {
-                transform: rotate(1turn);
-            }
-        }
-    }
-    .rotating-text2 {
-        fill: $lightGrey;
-        bottom: -100px;
-        right: -50px;
-        z-index: -2;
-        zoom: 1.2;
-    }
-}
 
 //program
 .main-section-2 {
@@ -244,6 +243,7 @@
     margin-top: 128px;
     padding-bottom: 128px;
     background-color: #20231f;
+
     .inner {
         h2 {
             padding-top: 100px;
@@ -263,9 +263,10 @@
             align-items: center;
             // overflow: hidden;
             width: 100%;
+            position: relative;
         }
         .slider-nav-wrap {
-            width: 60%;
+            width: 100%;
             overflow: hidden;
             .slider-nav {
                 .slick-slide {
@@ -308,29 +309,42 @@
                     font-weight: normal;
                     line-height: 2;
                     margin-top: 40px;
+
+                    &:hover {
+                        background: #000;
+                        color: $w;
+                        border: 1.5px solid $w;
+                    }
                 }
             }
         }
     }
 }
 .slick-slider {
-    .slick-arrow {
-        z-index: 10;
-        width: 84px;
-        height: 84px;
-        background: transparent;
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
+    position: static;
 
-        &::before {
-            display: none;
-        }
+    .slick-arrow {
+        z-index: 1000; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
+        position: absolute; /* 원하는 위치에 지정  */
+        top: 50%;
+        width: 50px;
+        height: 50px;
+        transform: translateY(-25px);
     }
-    .slick-prev {
-        background-image: url(/images/main/화살표.png);
+    .slick-prev.slick-arrow {
+        /* prev 이전 */
+        top: 280px;
+        left: 96px;
+        background: url(/images/main/화살표.png) no-repeat 50% 50%;
+        text-indent: -9999px;
     }
-    .slick-next {
-        background-image: url(/images/main/화살표.png);
+    .slick-next.slick-arrow {
+        /* next 다음 */
+        top: 255px;
+        left: 171px;
+        background: url(/images/main/화살표.png) no-repeat 50% 50%;
+        transform: scaleX(-1);
+        text-indent: -9999px;
     }
 }
 
@@ -397,6 +411,11 @@
                     justify-content: space-between;
                     font-size: 20px;
                     margin-left: 10px;
+                    p {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
                     em {
                         color: $darkGrey;
                     }

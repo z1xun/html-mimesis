@@ -34,7 +34,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
 
         <link rel="stylesheet" href="./dist/css/comm.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -104,7 +103,7 @@
                     });
                 </script>
 
-                <section class="slide-bottom">
+                <div class="slide-bottom">
                     <div class="inner">
                         <ul class="main-info-area">
                             <li class="info">
@@ -131,77 +130,47 @@
                             <a href="#">예약하기</a>
                         </div>
                     </div>
-                </section>
+                </div>
                 <section class="main-section-1">
                     <div class="inner">
                         <h2>EXHIBITION</h2>
                         <div class="exhivition-con">
                             <ul class="con-img">
-                                <li>
+                                <li class="active con-img1">
                                     <img
                                         src="./images/main/현재전시1.jpg"
                                         alt="MIMESIS SE 17 Border of Skin 김찬송 개인전"
                                     />
                                 </li>
-                                <li>
+                                <li class="con-img2">
                                     <img
                                         src="./images/main/현재전시2.jpg"
                                         alt=" 2023 MIMESIS COLLECTION: 창문 너머 산책자"
                                     />
                                 </li>
-                                <li>
+                                <li class="con-img3">
                                     <img src="./images/main/현재전시3.jpg" alt="MIM Project 1st -김로와 Lowa Kim" />
                                 </li>
                             </ul>
                             <div class="txt-box">
                                 <ul>
-                                    <li>
+                                    <li class="con-txt1">
                                         <span class="badge">전시중</span>
                                         <a href="#">MIMESIS SE 17 Border of Skin 김찬송 개인전</a>
                                         <p>기간 : 2023년 8월 13일 - 9월 24일</p>
                                     </li>
-                                    <li>
+                                    <li class="con-txt2">
                                         <span class="badge">전시중</span>
                                         <a href="#">2023 MIMESIS COLLECTION: 창문 너머 산책자</a>
                                         <p>기간 : 2023년 6월 29일 - 9월 24일</p>
                                     </li>
-                                    <li>
+                                    <li class="con-txt3">
                                         <span class="badge">전시중</span>
                                         <a href="#">MIM Project 1st -김로와 Lowa Kim</a>
                                         <p>기간 : 2023년 5월 28일 - 8 월 22일</p>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="circle-text">
-                            <svg width="280" height="280" class="rotating-text1">
-                                <path
-                                    id="curve"
-                                    fill="transparent"
-                                    d="
-                                        M 70, 140
-                                        a 50,50 0 1,1 140,0
-                                        a 50,50 0 1,1 -140,0
-                                         "
-                                />
-                                <text width="1000" font-size="20px" class="svg-text">
-                                    <textPath xlink:href="#curve">MIMESIS · ART MUSEUM MIMESIS · ART MUSEUM</textPath>
-                                </text>
-                            </svg>
-                            <svg width="280" height="280" class="rotating-text2">
-                                <path
-                                    id="curve"
-                                    fill="transparent"
-                                    d="
-                                        M 70, 140
-                                        a 70,70 0 1,1 140,0
-                                        a 70,70 0 1,1 -140,0
-                                         "
-                                />
-                                <text width="1000" font-size="20px" class="svg-text">
-                                    <textPath xlink:href="#curve">MIMESIS · ART MUSEUM MIMESIS · ART MUSEUM</textPath>
-                                </text>
-                            </svg>
                         </div>
                     </div>
                 </section>
@@ -216,7 +185,7 @@
                                         기간 : 2023년 07월 25일 ~ 8월 27일 <br />
                                         장소 : 3F 전시공간
                                     </p>
-                                    <button><a href="#">자세히보기</a></button>
+                                    <button>자세히보기</button>
                                 </li>
                                 <li class="program-txt">
                                     <h3>세계는 왜 지금 한국 현대미술에 주목하는가?</h3>
@@ -224,7 +193,7 @@
                                         기간 : 2023년 11월 19일 ~ 11월 30일 <br />
                                         장소 : 미메시스 아트 뮤지엄
                                     </p>
-                                    <button><a href="#">자세히보기</a></button>
+                                    <button>자세히보기</button>
                                 </li>
                                 <li class="program-txt">
                                     <h3>전시연계 라운드토크 "시대의 수집과 탐구에서 예술로"</h3>
@@ -232,9 +201,7 @@
                                         기간 : 2023년 12월 3일 ~ 12월 14일 <br />
                                         장소 : 미메시스 아트 뮤지엄
                                     </p>
-                                    <button>
-                                        <a href="#"><p>자세히보기</p></a>
-                                    </button>
+                                    <button>자세히보기</button>
                                 </li>
                             </ul>
 
@@ -266,6 +233,7 @@
                         slidesToScroll: 1,
                         arrows: false,
                         fade: true,
+                        arrow: false,
                         asNavFor: ".slider-nav",
                     });
                     $(".slider-nav").slick({
@@ -274,10 +242,9 @@
                         asNavFor: ".slider-for",
                         dots: false,
                         centerMode: false,
-                        autoplay: true,
-                        autoplaySpeed: 2000,
                         centerPadding: "20px",
                         focusOnSelect: true,
+                        arrows: true,
                     });
                 </script>
 
