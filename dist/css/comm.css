@@ -368,7 +368,7 @@ legend {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-image: url(/images/화살표버튼오른쪽.svg);
+  background-image: url(/images/main/arrowbtn-right.svg);
   background-size: 50px 50px;
   z-index: 1000;
 }
@@ -556,7 +556,7 @@ legend {
 .main-section-2 {
   width: 100%;
   margin-top: 128px;
-  padding-bottom: 128px;
+  padding-bottom: 100px;
   background-color: #20231f;
 }
 .main-section-2 .inner h2 {
@@ -636,23 +636,25 @@ legend {
   z-index: 1000; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
   position: absolute; /* 원하는 위치에 지정  */
   top: 50%;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   transform: translateY(-25px);
 }
 .slick-slider .slick-prev.slick-arrow {
   /* prev 이전 */
   top: 280px;
   left: 96px;
-  background: url(/images/main/화살표.png) no-repeat 50% 50%;
+  background: url(/images/main/arrow.png) no-repeat 50% 50%;
+  background-color: #000;
   text-indent: -9999px;
 }
 .slick-slider .slick-next.slick-arrow {
   /* next 다음 */
   top: 255px;
   left: 171px;
-  background: url(/images/main/화살표.png) no-repeat 50% 50%;
+  background: url(/images/main/arrow.png) no-repeat 50% 50%;
   transform: scaleX(-1);
+  background-color: #000;
   text-indent: -9999px;
 }
 
@@ -735,11 +737,6 @@ legend {
 .more a {
   display: flex;
   align-items: center;
-}
-.more a .material-symbols-outlined {
-  position: relative;
-  top: 1px;
-  font-weight: lighter;
 }
 
 .main-img {
@@ -985,7 +982,6 @@ legend {
 
 .reservation-container {
   padding: 65px 0;
-  height: 100vh;
 }
 .reservation-container .inner {
   display: flex;
@@ -1047,7 +1043,7 @@ legend {
   padding: 0;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .select::after {
-  content: url(/images/contents/예약화살표버튼.png);
+  content: url(/images/contents/contents-arrow.png);
   transform: rotateX(180deg);
   top: 38px;
   right: 25px;
@@ -1066,25 +1062,89 @@ legend {
 .reservation-container .inner .col-right .AccordionMenu li.show .date-select {
   justify-content: space-between;
 }
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left {
+  width: 50%;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top input[type=month] {
+  border: none;
+  width: 40%;
+  padding: 5px 4px;
+  background-color: transparent;
+  border-bottom: 2px solid #20231f;
+  font-size: 80%;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn {
+  width: 30%;
+  position: relative;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn .date-btn-prev::before {
+  content: url(/images/contents/contents-arrow.png);
+  top: 50%;
+  left: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  rotate: -90deg;
+  transform: translateY(-50%);
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn .date-btn-next::before {
+  content: url(/images/contents/contents-arrow.png);
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  rotate: 90deg;
+}
 .reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right {
   width: 40%;
-  background: #fff;
+  margin-top: 132px;
 }
-.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .date-notice-tit {
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .right-top li {
   position: relative;
-  margin-left: 16px;
+  padding-left: 24px;
+  font-size: 14px;
 }
-.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .date-notice-tit::before {
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .right-top li::before {
   content: "";
-  width: 6px;
-  height: 6px;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #003993;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .right-top li:nth-child(2):before {
+  background-color: #8f918f;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .date-notice {
+  background: #fff;
+  position: relative;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .date-notice .date-notice-tit {
+  margin-left: 16px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .date-notice .date-notice-tit::before {
+  content: "";
+  width: 4px;
+  height: 4px;
   background-color: #8f918f;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 8px;
 }
-.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right li {
-  margin: 10px 8px;
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .date-notice li {
+  padding: 10px 8px;
+  border-bottom: 2px solid #f3f3f3;
+  font-size: 14px;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .time-select a {
   display: block;
@@ -1145,7 +1205,7 @@ legend {
   cursor: pointer;
 }
 .reservation-container .inner .col-right .AccordionMenu li .select::after {
-  content: url(/images/contents/예약화살표버튼.png);
+  content: url(/images/contents/contents-arrow.png);
   top: 15px;
   right: 25px;
   position: absolute;
@@ -1153,7 +1213,7 @@ legend {
   height: 0;
 }
 .reservation-container .inner .col-right .AccordionMenu li .select-con {
-  padding: 30px 10px;
+  padding: 30px;
   display: none;
   opacity: 0;
   background: #f3f3f3;

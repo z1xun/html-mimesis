@@ -31,12 +31,14 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css" />
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
 
         <link rel="stylesheet" href="./dist/css/comm.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
         <script src="./dist/js/comm.js"></script>
@@ -48,13 +50,6 @@
         </div>
 
         <div class="wrap">
-            <!-- <header id="header">
-                    <h1 id="logo">
-                        <a href="#">logo</a>
-                    </h1>
-                    <nav id="gnb">nav</nav>
-                </header> -->
-
             <main id="main">
                 <!-- 슬라이드 -->
                 <div class="main_slider">
@@ -81,27 +76,6 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-
-                <!-- Swiper JS -->
-
-                <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-                <!-- Initialize Swiper -->
-                <script>
-                    var swiper = new Swiper(".swiper-container", {
-                        slidesPerView: 1,
-                        initialSlide: 1,
-                        loop: true,
-                        pagination: {
-                            el: ".swiper-pagination",
-                            clickable: true,
-                        },
-                        navigation: {
-                            nextEl: ".mainswiper-button-next",
-                            prevEl: ".mainswiper-button-prev",
-                        },
-                    });
-                </script>
 
                 <div class="slide-bottom">
                     <div class="inner">
@@ -138,18 +112,18 @@
                             <ul class="con-img">
                                 <li class="active con-img1">
                                     <img
-                                        src="./images/main/현재전시1.jpg"
+                                        src="./images/main/exhibition1.jpg"
                                         alt="MIMESIS SE 17 Border of Skin 김찬송 개인전"
                                     />
                                 </li>
                                 <li class="con-img2">
                                     <img
-                                        src="./images/main/현재전시2.jpg"
+                                        src="./images/main/exhibition2.jpg"
                                         alt=" 2023 MIMESIS COLLECTION: 창문 너머 산책자"
                                     />
                                 </li>
                                 <li class="con-img3">
-                                    <img src="./images/main/현재전시3.jpg" alt="MIM Project 1st -김로와 Lowa Kim" />
+                                    <img src="./images/main/exhibition3.jpg" alt="MIM Project 1st -김로와 Lowa Kim" />
                                 </li>
                             </ul>
                             <div class="txt-box">
@@ -208,17 +182,17 @@
                             <div class="slider-nav-wrap">
                                 <ul class="slider-nav">
                                     <li>
-                                        <img src="./images/main/프로그램1.jpg" alt="관람객 초상화 제작 프로그램" />
+                                        <img src="./images/main/program1.jpg" alt="관람객 초상화 제작 프로그램" />
                                     </li>
                                     <li>
                                         <img
-                                            src="./images/main/프로그램2.jpg"
+                                            src="./images/main/program2.jpg"
                                             alt="세계는 왜 지금 한국 현대미술에 주목하는가?"
                                         />
                                     </li>
                                     <li>
                                         <img
-                                            src="./images/main/프로그램3.jpg"
+                                            src="./images/main/program3.jpg"
                                             alt="전시연계 라운드토크 시대의 수집과 탐구에서 예술로"
                                         />
                                     </li>
@@ -227,38 +201,17 @@
                         </div>
                     </div>
                 </section>
-                <script>
-                    $(".slider-for").slick({
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        arrows: false,
-                        fade: true,
-                        arrow: false,
-                        asNavFor: ".slider-nav",
-                    });
-                    $(".slider-nav").slick({
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                        asNavFor: ".slider-for",
-                        dots: true,
-                        centerMode: false,
-                        centerPadding: "20px",
-                        focusOnSelect: true,
-                        arrows: true,
-                    });
-                </script>
 
                 <section class="main-section-3">
                     <div class="inner">
                         <div class="vr-tour">
                             <h2>가상투어</h2>
                             <div class="tour-con">
-                                <a href="#"><img src="./images/main/가상투어이미지.jpg" alt="가상투어이미지" /></a>
+                                <a href="#"><img src="./images/main/tour.jpg" alt="" /></a>
                             </div>
                             <div class="more">
                                 <a href="#">
                                     <span>자세히보기</span>
-                                    <span class="material-symbols-outlined"> chevron_right </span>
                                 </a>
                             </div>
                         </div>
@@ -293,14 +246,12 @@
                             <div class="more">
                                 <a href="#">
                                     <span>자세히보기</span>
-                                    <span class="material-symbols-outlined"> chevron_right </span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
-            <!-- <footer id="footer">풋터</footer> -->
         </div>
     </body>
 </html>

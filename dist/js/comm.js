@@ -20,4 +20,37 @@ $(function () {
             $li.toggleClass("show");
         }
     });
+
+    $(".slider-for").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        arrow: false,
+        asNavFor: ".slider-nav",
+    });
+    $(".slider-nav").slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        asNavFor: ".slider-for",
+        dots: false,
+        centerMode: false,
+        centerPadding: "20px",
+        focusOnSelect: true,
+        arrows: true,
+    });
+
+    var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 1,
+        initialSlide: 1,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".mainswiper-button-next",
+            prevEl: ".mainswiper-button-prev",
+        },
+    });
 });
