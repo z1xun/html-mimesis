@@ -1056,15 +1056,35 @@ legend {
   height: 0;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .select-con {
-  display: block;
+  display: flex;
+  justify-content: space-around;
   opacity: 1;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .select-con span {
   font-size: 14px;
 }
-.reservation-container .inner .col-right .AccordionMenu li.show .time-select {
-  display: flex;
-  justify-content: space-around;
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select {
+  justify-content: space-between;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right {
+  width: 40%;
+  background: #fff;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .date-notice-tit {
+  position: relative;
+  margin-left: 16px;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .date-notice-tit::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #8f918f;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right li {
+  margin: 10px 8px;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .time-select a {
   display: block;
@@ -1077,8 +1097,6 @@ legend {
   margin: 50px;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .person-select {
-  display: flex;
-  justify-content: space-around;
   align-items: center;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .person-select input[type=number]::-webkit-outer-spin-button,
@@ -1144,8 +1162,16 @@ legend {
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 16px;
 }
 .reservation-container .inner .col-right .total span {
   font-size: 18px;
   font-weight: 500;
+}
+.reservation-container .inner .col-right .next-btn {
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  background: #20231f;
+  color: #fff;
 }/*# sourceMappingURL=comm.css.map */

@@ -105,16 +105,40 @@
                         }
 
                         .select-con {
-                            display: block;
+                            display: flex;
+                            justify-content: space-around;
                             opacity: 1;
                             span {
                                 font-size: 14px;
                             }
                         }
 
+                        .date-select {
+                            justify-content: space-between;
+
+                            .date-right {
+                                width: 40%;
+                                background: $w;
+                                .date-notice-tit {
+                                    position: relative;
+                                    margin-left: 16px;
+                                    &::before {
+                                        content: "";
+                                        width: 6px;
+                                        height: 6px;
+                                        background-color: $darkGrey;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                }
+                                li {
+                                    margin: 10px 8px;
+                                }
+                            }
+                        }
+
                         .time-select {
-                            display: flex;
-                            justify-content: space-around;
                             a {
                                 display: block;
                                 background-color: $w;
@@ -127,8 +151,6 @@
                             }
                         }
                         .person-select {
-                            display: flex;
-                            justify-content: space-around;
                             align-items: center;
                             input[type="number"]::-webkit-outer-spin-button,
                             input[type="number"]::-webkit-inner-spin-button {
@@ -205,10 +227,18 @@
                 padding: 0 10px;
                 display: flex;
                 justify-content: space-between;
+                margin-bottom: 16px;
                 span {
                     font-size: 18px;
                     font-weight: 500;
                 }
+            }
+            .next-btn {
+                width: 100%;
+                height: 50px;
+                margin: 0 auto;
+                background: $b;
+                color: $w;
             }
         }
     }
