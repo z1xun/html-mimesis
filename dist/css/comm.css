@@ -290,6 +290,16 @@ legend {
 }
 .page_path ul {
   display: flex;
+  align-items: center;
+}
+.page_path ul .home::after {
+  top: 14px;
+}
+.page_path ul .home a::after {
+  content: "\f015";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  font-size: 20px;
 }
 .page_path ul li {
   margin-right: 20px;
@@ -638,23 +648,37 @@ legend {
   top: 50%;
   width: 30px;
   height: 30px;
-  transform: translateY(-25px);
+  transform: translateY(-15px);
 }
 .slick-slider .slick-prev.slick-arrow {
   /* prev 이전 */
   top: 280px;
   left: 96px;
   background: url(/images/main/arrow.png) no-repeat 50% 50%;
-  background-color: #000;
   text-indent: -9999px;
 }
 .slick-slider .slick-next.slick-arrow {
   /* next 다음 */
-  top: 255px;
+  top: 280px;
   left: 171px;
-  background: url(/images/main/arrow.png) no-repeat 50% 50%;
-  transform: scaleX(-1);
-  background-color: #000;
+  background: url(/images/main/rightarrow.png) no-repeat 50% 50%;
+  text-indent: -9999px;
+}
+.slick-slider .custom_paging {
+  position: absolute;
+  display: flex;
+  top: 266px;
+  left: 130px;
+  gap: 10px;
+}
+.slick-slider .custom_paging .slick-active button {
+  background-color: #fff;
+}
+.slick-slider .custom_paging button {
+  background-color: #8f918f;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
   text-indent: -9999px;
 }
 
@@ -738,6 +762,11 @@ legend {
   display: flex;
   align-items: center;
 }
+.more a::after {
+  content: "\f105";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+}
 
 .main-img {
   width: 100%;
@@ -774,7 +803,7 @@ legend {
   position: absolute;
   top: 7%;
   left: 6%;
-  background: url(/html-mimesis/images/contents/circle-txt.png) no-repeat 0 0;
+  background: url(/images/contents/circle-txt.png) no-repeat 0 0;
 }
 
 .about-swiper-container {
@@ -811,7 +840,7 @@ legend {
 .swiper-button-prev {
   width: 50px;
   height: 50px;
-  background-image: url(/images/화살표버튼오른쪽.svg);
+  background-image: url(/images/main/arrowbtn-right.svg);
   background-size: 70px 70px;
   z-index: 1000;
 }
@@ -989,42 +1018,45 @@ legend {
 .reservation-container .inner .col-left {
   width: 40%;
 }
-.reservation-container .inner .col-left h3 {
+.reservation-container .inner .col-left .left-box-wrap {
+  position: fixed;
+}
+.reservation-container .inner .col-left .left-box-wrap h3 {
   margin-bottom: 20px;
 }
-.reservation-container .inner .col-left .left-box {
+.reservation-container .inner .col-left .left-box-wrap .left-box {
   width: 300px;
   height: 365px;
-  box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 6px 6px 28px 0px rgba(0, 0, 0, 0.25);
 }
-.reservation-container .inner .col-left .left-box .box-img {
+.reservation-container .inner .col-left .left-box-wrap .left-box .box-img {
   height: 60%;
 }
-.reservation-container .inner .col-left .left-box .box-img img {
+.reservation-container .inner .col-left .left-box-wrap .left-box .box-img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.reservation-container .inner .col-left .left-box .box-text {
+.reservation-container .inner .col-left .left-box-wrap .left-box .box-text {
   width: 100%;
   height: 40%;
   padding: 18px 0;
 }
-.reservation-container .inner .col-left .left-box .box-text li {
+.reservation-container .inner .col-left .left-box-wrap .left-box .box-text li {
   padding: 9px;
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.reservation-container .inner .col-left .left-box .box-text .box-tit {
+.reservation-container .inner .col-left .left-box-wrap .left-box .box-text .box-tit {
   border-bottom: 1px dashed #8f918f;
 }
-.reservation-container .inner .col-left .left-box .box-text .box-date {
+.reservation-container .inner .col-left .left-box-wrap .left-box .box-text .box-date {
   position: relative;
 }
-.reservation-container .inner .col-left .left-box .box-text .box-date::after {
+.reservation-container .inner .col-left .left-box-wrap .left-box .box-text .box-date::after {
   content: "";
   width: 100%;
   height: 1px;
@@ -1079,23 +1111,35 @@ legend {
   font-size: 80%;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn {
-  width: 30%;
+  width: 18%;
+  display: flex;
+  justify-content: space-between;
   position: relative;
+  font-size: 12px;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn .date-btn-prev::before {
   content: url(/images/contents/contents-arrow.png);
-  top: 50%;
-  left: 0;
+  top: 17px;
+  left: -21px;
   position: absolute;
   width: 0;
   height: 0;
   rotate: -90deg;
-  transform: translateY(-50%);
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn .date-btn-prev::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 12px;
+  background-color: #8f918f;
+  position: absolute;
+  top: 2px;
+  left: 32px;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn .date-btn-next::before {
   content: url(/images/contents/contents-arrow.png);
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -21px;
   position: absolute;
   width: 0;
   height: 0;
@@ -1179,16 +1223,19 @@ legend {
   position: relative;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .person-select .quantity-box .plus::after {
-  content: "+";
-  font-size: 20px;
+  content: "\f067";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .person-select .quantity-box .minus::after {
-  content: "-";
-  font-size: 30px;
+  content: "\f068";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;

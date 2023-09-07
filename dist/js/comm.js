@@ -12,15 +12,6 @@ $(function () {
         $(".con-img3").removeClass("active");
     });
 
-    $(".AccordionMenu .select").on("click", function () {
-        var $li = $(this).parent("li");
-        if ($li.hasClass("show") == true) {
-            $li.toggleClass("show");
-        } else {
-            $li.toggleClass("show");
-        }
-    });
-
     $(".slider-for").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -33,7 +24,9 @@ $(function () {
         slidesToShow: 2,
         slidesToScroll: 1,
         asNavFor: ".slider-for",
-        dots: false,
+        dots: true,
+        dotsClass: "custom_paging",
+
         centerMode: false,
         centerPadding: "20px",
         focusOnSelect: true,

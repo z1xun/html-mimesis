@@ -21,6 +21,18 @@
     margin-bottom: 32px;
     ul {
         display: flex;
+        align-items: center;
+        .home {
+            &::after {
+                top: 14px;
+            }
+            a::after {
+                content: "\f015";
+                font-family: "Line Awesome Free";
+                font-weight: 900;
+                font-size: 20px;
+            }
+        }
 
         li {
             margin-right: 20px;
