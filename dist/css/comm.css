@@ -1097,53 +1097,27 @@ legend {
 .reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left {
   width: 50%;
 }
-.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top input[type=month] {
-  border: none;
-  width: 40%;
-  padding: 5px 4px;
-  background-color: transparent;
-  border-bottom: 2px solid #20231f;
-  font-size: 80%;
-}
-.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn {
-  width: 18%;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .calender .flatpickr-calendar.inline {
+  width: 100%;
+  border-radius: 0px;
+  box-shadow: none;
   font-size: 12px;
+  background: transparent;
 }
-.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn .date-btn-prev::before {
-  content: url(/images/contents/contents-arrow.png);
-  top: 17px;
-  left: -21px;
-  position: absolute;
-  width: 0;
-  height: 0;
-  rotate: -90deg;
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .calender .flatpickr-calendar.inline .flatpickr-months .flatpickr-prev-month:hover svg,
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .calender .flatpickr-calendar.inline .flatpickr-months .flatpickr-next-month:hover svg {
+  fill: #003993;
 }
-.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn .date-btn-prev::after {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 12px;
-  background-color: #8f918f;
-  position: absolute;
-  top: 2px;
-  left: 32px;
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .calender .flatpickr-innerContainer {
+  justify-content: center;
+  margin-top: 20px;
+  background: #fff;
 }
-.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .left-top .date-btn .date-btn-next::before {
-  content: url(/images/contents/contents-arrow.png);
-  top: -1px;
-  right: -21px;
-  position: absolute;
-  width: 0;
-  height: 0;
-  rotate: 90deg;
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .calender .flatpickr-innerContainer .flatpickr-day {
+  border-radius: 0px;
+}
+.reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-left .calender .flatpickr-innerContainer .flatpickr-day.selected {
+  background: #003993;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right {
   width: 40%;
@@ -1162,10 +1136,10 @@ legend {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  background-color: #003993;
+  background-color: #8f918f;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .right-top li:nth-child(2):before {
-  background-color: #8f918f;
+  background-color: #003993;
 }
 .reservation-container .inner .col-right .AccordionMenu li.show .date-select .date-right .date-notice {
   background: #fff;
@@ -1180,6 +1154,7 @@ legend {
   content: "";
   width: 4px;
   height: 4px;
+  border-radius: 50%;
   background-color: #8f918f;
   position: absolute;
   top: 10px;

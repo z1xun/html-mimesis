@@ -34,6 +34,7 @@
 
         .col-left {
             width: 40%;
+
             .left-box-wrap {
                 position: fixed;
                 h3 {
@@ -120,56 +121,27 @@
                             justify-content: space-between;
                             .date-left {
                                 width: 50%;
-                                .left-top {
-                                    display: flex;
-                                    justify-content: space-between;
-                                    align-items: center;
 
-                                    input[type="month"] {
-                                        border: none;
-                                        width: 40%;
-                                        padding: 5px 4px;
-                                        background-color: transparent;
-                                        border-bottom: 2px solid $b;
-                                        font-size: 80%;
-                                    }
-                                    .date-btn {
-                                        width: 18%;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        position: relative;
+                                .calender {
+                                    .flatpickr-calendar.inline {
+                                        width: 100%;
+                                        border-radius: 0px;
+                                        box-shadow: none;
                                         font-size: 12px;
-                                        .date-btn-prev {
-                                            &::before {
-                                                content: url(/images/contents/contents-arrow.png);
-                                                top: 17px;
-                                                left: -21px;
-                                                position: absolute;
-                                                width: 0;
-                                                height: 0;
-                                                rotate: -90deg;
-                                            }
-                                            &::after {
-                                                content: "";
-                                                display: block;
-
-                                                width: 1px;
-                                                height: 12px;
-                                                background-color: #8f918f;
-                                                position: absolute;
-                                                top: 2px;
-                                                left: 32px;
-                                            }
+                                        background: transparent;
+                                        .flatpickr-months .flatpickr-prev-month:hover svg,
+                                        .flatpickr-months .flatpickr-next-month:hover svg {
+                                            fill: #003993;
                                         }
-                                        .date-btn-next {
-                                            &::before {
-                                                content: url(/images/contents/contents-arrow.png);
-                                                top: -1px;
-                                                right: -21px;
-                                                position: absolute;
-                                                width: 0;
-                                                height: 0;
-                                                rotate: 90deg;
+                                    }
+                                    .flatpickr-innerContainer {
+                                        justify-content: center;
+                                        margin-top: 20px;
+                                        background: $w;
+                                        .flatpickr-day {
+                                            border-radius: 0px;
+                                            &.selected {
+                                                background: #003993;
                                             }
                                         }
                                     }
@@ -193,10 +165,10 @@
                                         top: 50%;
                                         left: 0;
                                         transform: translateY(-50%);
-                                        background-color: #003993;
+                                        background-color: $darkGrey;
                                     }
                                     li:nth-child(2):before {
-                                        background-color: $darkGrey;
+                                        background-color: #003993;
                                     }
                                 }
 
@@ -211,6 +183,7 @@
                                             content: "";
                                             width: 4px;
                                             height: 4px;
+                                            border-radius: 50%;
                                             background-color: $darkGrey;
                                             position: absolute;
                                             top: 10px;
