@@ -206,11 +206,18 @@
                                 border-radius: 4px;
                                 padding: 10px 0;
                                 margin-bottom: 20px;
+                                box-sizing: border-box;
+                                transition: all 0.2s;
+                                &:hover {
+                                    background-color: $b;
+                                    color: $w;
+                                }
                             }
                             span {
                                 margin: 50px;
                             }
                         }
+
                         .person-select {
                             align-items: center;
                             input[type="number"]::-webkit-outer-spin-button,
@@ -264,7 +271,7 @@
                         color: $b;
                         font-size: 18px;
                         font-weight: 500;
-                        padding: 10px;
+                        padding: 10px 0;
                         border-bottom: 1px solid $lightGrey;
                         position: relative;
                         cursor: pointer;
@@ -282,7 +289,6 @@
                         padding: 30px;
                         display: none;
                         opacity: 0;
-
                         background: #f3f3f3;
                     }
                 }
@@ -301,8 +307,14 @@
                 width: 100%;
                 height: 50px;
                 margin: 0 auto;
-                background: $b;
-                color: $w;
+                background: $w;
+                border: 2px solid $b;
+                transition: all 0.3s;
+
+                &:hover {
+                    background: $b;
+                    color: $w;
+                }
             }
         }
     }
